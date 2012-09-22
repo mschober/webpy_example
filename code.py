@@ -6,7 +6,8 @@ render = web.template.render('templates/')
 urls = (
     #'/users/(.*)', 'users',
     #'/(.*)', 'index'
-    '/', 'index'
+    '/', 'index',
+    '/add', 'add'
 )
 
 
@@ -16,6 +17,12 @@ class index:
     def GET(self):
         todos = db.select('todo')
         return render.index(todos)
+
+class add:
+    def POST(self):
+        i = web.input()
+        n = db.insert('todo', title=i.title)
+        raise web.seeother('/')
 
 class users:
     def GET(self, user):

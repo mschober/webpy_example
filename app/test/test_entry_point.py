@@ -4,6 +4,11 @@ from src.entry_point import *
 
 class TestCode():
 
+    def test_app_wiring(self):
+        assert urls >= 1
+        assert render
+        assert hello
+
     def setUp(self):
         middleware = []
         testApp = TestApp(app.wsgifunc(*middleware))
@@ -14,9 +19,3 @@ class TestCode():
 
     def test_hello_matches(self):
         self.request.mustcontain('Hello, World!')
-
-    def test_app_wiring(self):
-        assert urls >= 1
-        assert render
-        assert hello
-

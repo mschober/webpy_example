@@ -25,3 +25,8 @@ class TestCode():
         assert_equal(self.request.status, 200)
         self.request.mustcontain('Hey you found the route page!')
 
+    def test_url_mapping_to_route_controller(self):
+        self.request = self.testApp.get('/route/5')
+        assert_equal(self.request.status, 200)
+        self.request.mustcontain('the route you are seeing is 5')
+

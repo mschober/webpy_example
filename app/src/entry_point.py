@@ -1,12 +1,19 @@
 import web
+import controllers
+
+render = web.template.render('app/src/views')
 
 urls = (
-    '/hello', 'hello'
+    '/hello', 'hello',
+    '/route', 'controllers.route.index'
 )
 
 app = web.application(urls, globals())
-render = web.template.render('app/src/resources')
 
-class hello():
+class hello:
     def GET(self):
         return render.hello()
+
+if __name__ == "__main__":
+    app.run()
+

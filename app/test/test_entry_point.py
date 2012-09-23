@@ -16,3 +16,11 @@ class TestCode():
         request = testApp.get('/hello')
         assert_equal(request.status, 200)
 
+
+
+    def test_hello_matches(self):
+        middleware = []
+        testApp = TestApp(app.wsgifunc(*middleware))
+        request = testApp.get('/hello')
+        request.mustcontain('Hello, World!')
+

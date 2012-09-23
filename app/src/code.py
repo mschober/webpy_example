@@ -1,15 +1,18 @@
 import web
 import MySQLdb as db
 
-render = web.template.render('templates/')
+render = web.template.render('app/src/resources/')
 
 urls = (
     #'/users/(.*)', 'users',
     #'/(.*)', 'index'
     '/', 'index',
-    '/add', 'add'
+    '/add', 'add',
+    '/route', 'one',
+    '/hello', 'hello'
 )
 
+app = web.application(urls, globals())
 
 class index: 
     #def GET(self, name):
@@ -24,6 +27,17 @@ class add:
         n = db.insert('todo', title=i.title)
         raise web.seeother('/')
 
+class one:
+    def POST(self, route_number):
+        i = web.input()
+        n = db.insert('todo', title=i.title)
+        return render.route_1_sonar(route_number)
+
+class hello:
+    def GET(self):
+        return render.hello()
+
+
 class users:
     def GET(self, user):
         return render.users(user)
@@ -32,5 +46,4 @@ class users:
 db = web.database(dbn='mysql', user='busbeep', pw='DannyBoy6812', db='busbeep_dev')
 
 if __name__ == "__main__":
-    app = web.application(urls, globals())
     app.run()

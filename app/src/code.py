@@ -9,7 +9,8 @@ urls = (
     '/', 'index',
     '/add', 'add',
     '/route', 'one',
-    '/hello', 'hello'
+    '/hello', 'hello',
+    '/hello/control', 'hello_control'
 )
 
 app = web.application(urls, globals())
@@ -36,6 +37,10 @@ class one:
 class hello:
     def GET(self):
         return render.hello()
+
+class hello_control:
+    def GET(self):
+        return render.hello_control()
 
 
 class users:

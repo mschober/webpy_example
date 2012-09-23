@@ -5,8 +5,9 @@ import os
 render = web.template.render('app/src/views')
 
 urls = (
-    '/hello', 'hello',
-    '/route', 'controllers.route.index',
+    '/hello',       'hello',
+    '/route',       'controllers.route.index',
+    '/route/(\d+)', 'controllers.route.show',
 )
 
 app = web.application(urls, globals())

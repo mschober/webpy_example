@@ -13,3 +13,7 @@ class TestCode:
         connection = sonar.connect()
         rows = connection.query('select 1 from dual')
         assert len(rows) >= 1
+
+    def test_select_all_sonars_from_route_1(self):
+        rows = sonar.select_all_sonars_from('route_1_sonar')
+        assert len(rows) >= 0

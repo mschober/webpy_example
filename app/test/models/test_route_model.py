@@ -16,4 +16,10 @@ class TestCode:
 
     def test_select_all_sonars_from_route_1(self):
         rows = sonar.select_all_sonars_from('route_1_sonar')
-        assert len(rows) >= 0
+        assert_equal(0, len(rows))
+
+    def test_insert_rows_into_route_1_sonar(self):
+        inserted = sonar.bus_landed('route_1_sonar', 1, 1)
+        rows = sonar.select_all_sonars_from('route_1_sonar')
+        assert len(rows) == 1 
+        sonar.connect().delete('route_1_sonar', where='1=1')

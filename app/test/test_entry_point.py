@@ -45,5 +45,10 @@ class TestCode():
         assert_equal(self.request.status, 200)
         self.request.mustcontain('here are the routes associated with route 5')
 
+    def test_access_specific_stop(self):
+        self.request = self.testApp.get('/route/5/bus/8/stop/3')
+        assert_equal(self.request.status, 200)
+        self.request.mustcontain('bus 8 for route 5 just landed at stop 3')
+
 
 

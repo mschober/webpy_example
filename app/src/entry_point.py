@@ -5,11 +5,12 @@ import os
 render = web.template.render('app/src/views')
 
 urls = (
-    '/hello',                   'hello',
-    '/route',                   'controllers.route.index',
-    '/route/(\d+)',             'controllers.route.show',
-    '/route/(\d+)/bus',         'controllers.bus.index',
-    '/route/(\d+)/bus/(\d+)',   'controllers.bus.show',
+    '/hello',                           'hello',
+    '/route',                           'controllers.route.index',
+    '/route/(\d+)',                     'controllers.route.show',
+    '/route/(\d+)/bus',                 'controllers.bus.index',
+    '/route/(\d+)/bus/(\d+)',           'controllers.bus.show',
+    '/route/(\d+)/bus/(\d+)/stop',      'controllers.stop.index',
 )
 
 app = web.application(urls, globals())

@@ -1,1 +1,4 @@
-pass
+
+
+def connect():
+    return True

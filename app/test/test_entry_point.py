@@ -25,8 +25,14 @@ class TestCode():
         assert_equal(self.request.status, 200)
         self.request.mustcontain('Hey you found the route page!')
 
-    def test_url_mapping_to_route_controller(self):
+    def test_can_access_specific_route(self):
         self.request = self.testApp.get('/route/5')
         assert_equal(self.request.status, 200)
         self.request.mustcontain('the route you are seeing is 5')
+
+    def test_can_access_bus_page_from_routes(self):
+        self.request = self.testApp.get('/route/5/bus')
+        assert_equal(self.request.status, 200)
+        self.request.mustcontain('here are the buses associated with 5')
+
 

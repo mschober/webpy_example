@@ -1,4 +1,4 @@
-
+from config import db
 
 def connect():
-    return True
+    return db

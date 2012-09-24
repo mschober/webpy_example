@@ -35,4 +35,10 @@ class TestCode():
         assert_equal(self.request.status, 200)
         self.request.mustcontain('here are the buses associated with 5')
 
+    def test_can_access_a_specific_bus(self):
+        self.request = self.testApp.get('/route/5/bus/8')
+        assert_equal(self.request.status, 200)
+        self.request.mustcontain('what do you want to do with bus 8?')
+
+
 

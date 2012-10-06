@@ -1,6 +1,4 @@
 from src.controllers import route
-
-from src.entry_point import *
 from test.controllers.test_controller import *
 
 

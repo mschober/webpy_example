@@ -1,4 +1,4 @@
-from src.entry_point import *
+from src.entry_point import urls, render, hello
 from test.controllers.test_controller import *
 
 class TestEntryPoint(TestController):

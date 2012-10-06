@@ -3,9 +3,10 @@ from src.controllers import bus
 from paste.fixture import TestApp
 from nose.tools import *
 from src.entry_point import *
+from test.controllers.test_controller import *
 
 
-class TestCode():
+class TestBusController(TestController):
 
     def test_can_see_buses(self):
         assert bus

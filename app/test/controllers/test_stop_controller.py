@@ -3,8 +3,9 @@ from src.controllers import stop
 from paste.fixture import TestApp
 from nose.tools import *
 from src.entry_point import *
+from test.controllers.test_controller import *
 
-class TestCode():
+class TestStopController(TestController):
 
     def test_can_show_stops(self):
         assert stop

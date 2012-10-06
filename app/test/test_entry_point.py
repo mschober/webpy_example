@@ -3,7 +3,7 @@ from nose.tools import *
 from src.entry_point import *
 from test.controllers.test_controller import *
 
-class TestCode(TestController):
+class TestEntryPoint(TestController):
 
     def test_app_wiring(self):
         assert urls >= 1

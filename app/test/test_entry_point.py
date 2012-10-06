@@ -1,5 +1,4 @@
 from paste.fixture import TestApp
-from nose.tools import *
 from src.entry_point import *
 from test.controllers.test_controller import *
 

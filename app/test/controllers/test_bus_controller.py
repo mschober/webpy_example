@@ -1,6 +1,5 @@
 from src.controllers import bus
 
-from paste.fixture import TestApp
 from src.entry_point import *
 from test.controllers.test_controller import *
 

@@ -1,5 +1,5 @@
-from src.controllers import stop
-from test.controllers.test_controller import *
+from src.controller import stop
+from test.controller.test_controller import *
 
 class TestStopController(TestController):
 

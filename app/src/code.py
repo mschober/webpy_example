@@ -1,6 +1,6 @@
 import web
 import MySQLdb as db
-import controllers
+import controller
 
 render = web.template.render('app/src/views/')
 

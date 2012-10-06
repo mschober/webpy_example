@@ -1,5 +1,5 @@
 from src.entry_point import urls, render, hello
-from test.controllers.test_controller import *
+from test.controller.test_controller import *
 
 class TestEntryPoint(TestController):
 

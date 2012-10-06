@@ -1,5 +1,5 @@
-from src.controllers import route
-from test.controllers.test_controller import *
+from src.controller import route
+from test.controller.test_controller import *
 
 
 class TestRouteController(TestController):

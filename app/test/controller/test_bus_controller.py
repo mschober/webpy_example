@@ -1,5 +1,5 @@
-from src.controllers import bus
-from test.controllers.test_controller import *
+from src.controller import bus
+from test.controller.test_controller import *
 
 
 class TestBusController(TestController):

@@ -11,10 +11,6 @@ class TestRouteController(TestController):
     def test_shows_routes(self):
         assert route.show
 
-    def setUp(self):
-        middleware = []
-        self.testApp = TestApp(app.wsgifunc(*middleware))
-
     def test_url_mapping_to_route_controller(self):
         self.request = self.testApp.get('/route')
         assert_equal(self.request.status, 200)

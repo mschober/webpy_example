@@ -11,10 +11,6 @@ class TestBusController(TestController):
     def test_can_access_specific_bus(self):
         assert bus.show
 
-    def setUp(self):
-        middleware = []
-        self.testApp = TestApp(app.wsgifunc(*middleware))
-
     def test_can_access_bus_page_from_routes(self):
         self.request = self.testApp.get('/route/5/bus')
         assert_equal(self.request.status, 200)

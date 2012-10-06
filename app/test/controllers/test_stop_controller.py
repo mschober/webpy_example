@@ -10,10 +10,6 @@ class TestStopController(TestController):
     def test_can_show_specific_stops(self):
         assert stop.show
 
-    def setUp(self):
-        middleware = []
-        self.testApp = TestApp(app.wsgifunc(*middleware))
-
     def test_access_stops(self):
         self.request = self.testApp.get('/route/5/bus/8/stop')
         assert_equal(self.request.status, 200)

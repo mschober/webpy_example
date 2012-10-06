@@ -2,7 +2,7 @@ import web
 import controller
 import os
 
-render = web.template.render('app/src/views')
+render = web.template.render('app/src/view')
 
 urls = (
     '/hello',                               'hello',

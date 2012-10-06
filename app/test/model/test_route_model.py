@@ -1,5 +1,5 @@
 from nose.tools import *
-from src.models import sonar
+from src.model import sonar
 
 class TestCode:
 

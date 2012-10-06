@@ -1,6 +1,6 @@
 import web
 
-render = web.template.render('app/src/views')
+render = web.template.render('app/src/view')
 
 class index:
     def GET(self, the_route, the_bus):

@@ -2,7 +2,7 @@ import web
 import MySQLdb as db
 import controller
 
-render = web.template.render('app/src/views/')
+render = web.template.render('app/src/view/')
 
 
 urls = (

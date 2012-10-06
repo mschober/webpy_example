@@ -26,7 +26,7 @@ db = web.database(dbn='mysql', db='busbeep_dev', user='busbeep', passwd='DannyBo
 #mail_sender = 'MLSS 2009 <noreply@example.com>'
 #
 ## set global base template
-#view = web.template.render('app/views', cache=cache,  globals=globals)
+#view = web.template.render('app/view', cache=cache,  globals=globals)
 #
 ## used as a salt
 #encryption_key = 'a random string'
